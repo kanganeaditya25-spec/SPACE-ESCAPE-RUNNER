@@ -1,50 +1,120 @@
-# Welcome to your Expo app 👋
+# 🚀 Space Escape Runner
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple, fast-paced arcade dodge game built with React Native and Expo. Pilot your spaceship, dodge falling asteroids, rack up your score, and beat your personal high score!
 
-## Get started
+Built entirely with React Native `View` components and shapes — no image assets required.
 
-1. Install dependencies
+## 🎮 Gameplay
 
-   ```bash
-   npm install
-   ```
+Move your spaceship left and right to avoid falling asteroids. Every asteroid you dodge increases your score. One collision ends the game. Your highest score is saved locally and persists across sessions.
 
-2. Start the app
+## ✨ Features
 
-   ```bash
-   npx expo start
-   ```
+- Pure shape-based graphics — spaceship and asteroids drawn using React Native `View`s and styling, no images
+- Left / right movement controls with screen-boundary detection
+- Falling asteroids spawned at random positions with a continuous game loop
+- Collision detection between the spaceship and asteroids
+- Game Over screen with final score
+- Restart functionality that fully resets the game state
+- Persistent high score stored on-device using AsyncStorage
+- Modern UI with a gradient background and smooth animations
 
-In the output, you'll find options to open the app in a
+## 🛠️ Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- AsyncStorage — local high-score persistence
+- expo-linear-gradient — gradient background
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📋 Prerequisites
 
-## Get a fresh project
+Before running the project, make sure you have:
 
-When you're ready, run:
+- Node.js (LTS version recommended)
+- npm (comes with Node.js) or yarn
+- Expo Go app installed on your Android/iOS device
+- A code editor such as VS Code
 
+## 🚀 Getting Started
+
+### 1. Clone the repository
 ```bash
-npm run reset-project
+git clone https://github.com/kanganeaditya25-spec/SPACE-ESCAPE-RUNNER.git
+cd SPACE-ESCAPE-RUNNER
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-## Learn more
+### 3. Start the development server
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 4. Run the app
+- Open the Expo Go app on your phone.
+- Scan the QR code shown in the terminal or browser.
+- The app will load on your device.
+- You can also press `a` to open on an Android emulator or `i` for an iOS simulator.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📦 Building for Android
 
-## Join the community
+This project uses EAS Build to generate installable Android files.
 
-Join our community of developers creating universal apps.
+Generate an APK (for direct install / testing):
+```bash
+eas build -p android --profile preview
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Generate an AAB (for Google Play Store submission):
+```bash
+eas build -p android --profile production
+```
+
+## 📁 Project Structure
+
+```
+SPACE-ESCAPE-RUNNER/
+├── app/
+│   ├── index.tsx        # Main game logic and UI
+│   └── _layout.tsx       # Root navigation layout
+├── assets/                # App icon and splash assets
+├── app.json                # Expo configuration
+├── eas.json                 # EAS build configuration
+├── package.json              # Dependencies and scripts
+└── README.md
+```
+
+## 🎯 How to Play
+
+1. Tap **Start Game**.
+2. Use **Move Left** and **Move Right** to steer your spaceship.
+3. Dodge the falling asteroids.
+4. Survive as long as you can and beat your high score!
+5. Tap **Restart Game** after a Game Over to play again.
+
+## 🗺️ Roadmap / Future Improvements
+
+- Increasing difficulty (asteroid speed ramps up over time)
+- Multiple asteroids on screen at once
+- Sound effects and background music
+- Power-ups and shields
+- Global leaderboard
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+## 👤 Author
+
+**Aditya Deepak Kangane**
+
+Built as a beginner-friendly React Native + Expo learning project.
+
+GitHub: [@kanganeaditya25-spec](https://github.com/kanganeaditya25-spec)
